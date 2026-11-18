@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddHttpClient<CursoServicio>(httpClient =>
-    httpClient.BaseAddress = new Uri(builder.Configuration["ApiSettings:ApiURL"])
+    httpClient.BaseAddress = new Uri(builder.Configuration["ApiSettings:ApiUrl"])
 );
 
 

@@ -4,11 +4,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ClienteWeb.Controllers
 {
-    public class CursoController1 : Controller
+    public class CursoController : Controller
     {
         private readonly CursoServicio _cursoServicio;
 
-        public CursoController1(CursoServicio cursoServicio)
+        public CursoController(CursoServicio cursoServicio)
         {
             this._cursoServicio = cursoServicio;
         }
