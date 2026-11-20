@@ -1,10 +1,14 @@
 using Scalar.AspNetCore;
 using Microsoft.EntityFrameworkCore;
+using AutoMapper;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("APIBaseU4Context") ?? throw new InvalidOperationException("Connection string 'APIBaseU4Context' not found.");
 
 builder.Services.AddDbContext<APIBaseU4Context>(options => options.UseSqlServer(connectionString));
+
+builder.Services.AddAutoMapper(cfg => cfg.AddMaps(typeof(Program).Assembly));
+
 
 // Add services to the container.
 
